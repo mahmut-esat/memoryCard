@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, TouchableOpacity, Image, Text, ScrollView} from 'react-native';
+import {View, TouchableOpacity, Image} from 'react-native';
 import styles from './SimpleCard.styles';
 
 export default function SimpleCard({card, handleChoice, flipped, disabled}) {
@@ -28,4 +28,3 @@ export default function SimpleCard({card, handleChoice, flipped, disabled}) {
     </View>
   );
 }
-1;

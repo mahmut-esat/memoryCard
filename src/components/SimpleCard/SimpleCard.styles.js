@@ -6,16 +6,19 @@ export default StyleSheet.create({
     margin: 5,
     justifyContent:"center",
     alignItems:"center",
-    flexDirection: 'row', flexWrap: 'wrap'
+    flexDirection: 'row', 
+    flexWrap: 'wrap',
   },
   image_container: {
     flexDirection: 'column',
     position: 'relative',
-    marginTop:10
+    marginTop:10,
   },
   image: {
     width: 100,
     height: 100,
+    resizeMode:"contain",
+    borderRadius:15
   },
   text: {
     color: 'red',

@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Button, Text, View, StyleSheet} from 'react-native';
+import MyButton from './src/components/Button/Button';
 import SimpleCard from './src/components/SimpleCard/SimpleCard';
 
 const cardImages = [
@@ -59,7 +60,7 @@ function App() {
 
         resetTurn();
       } else {
-        setTimeout(() => resetTurn(), 500);
+        setTimeout(() => resetTurn(), 300);
       }
     }
   }, [choiceOne, choiceTwo]);
@@ -76,7 +77,7 @@ function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Eşleştirme Oyunu</Text>
-      <Button onPress={shuffleCards} title="Yeni Oyun"></Button>
+      <MyButton  onPress={shuffleCards}/>
       <View style={styles.inner_container}>
         {cards.map(card => (
           <SimpleCard
@@ -89,7 +90,7 @@ function App() {
         ))}
       </View>
       <View style={styles.turn_container}>
-        <Text style={styles.turn_text}>Turns: {turns}</Text>
+        <Text style={styles.turn_text}>Sayaç:  {turns}</Text>
       </View>
     </View>
   );
@@ -100,7 +101,7 @@ export default App;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ecf0f1',
+    backgroundColor: '#fff',
     padding: 8,
     alignItems: 'center',
   },
